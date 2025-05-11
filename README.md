@@ -304,7 +304,7 @@ The program will take an integer number as input and check if its even or odd .
 
 ## 🧩 Flowchart Image
 
-![Flowchart](path/to/your/image.png)
+![Flowchart](/Flowchart exercies.png)
 
 > Replace `path/to/your/image.png` with the actual path or GitHub URL where the image is uploaded (e.g., in your repo's `assets/` folder).
 
