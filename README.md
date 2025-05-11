@@ -6,8 +6,8 @@ This document provides all the exercises from the book along with their solution
 
 ## 🗂 Table of Contents
 - [✅ Basic Tasks](#-basic-tasks)
-- [🔤 Input, Variables & Parsing](#-input-variables--parsing)
 - [🔧 Operations](#-operations)
+- [🔤 Input,Output](#-input-variables--parsing)
 - [🔁 Loops](#-loops)
 - [📦 Arrays](#-arrays)
 - [🔧 Methods](#-methods)
@@ -138,7 +138,42 @@ How can we store true in Java?
 | 1999.6        | `double`      | `double value = 1999.6;`            |
 | true          | `boolean`     | `boolean isTrue = true;`             |
 ---
-### 🔤 Input, Variables & Parsing
+### 🔧 Operations
+
+1. **Initialization:**
+     ```java
+      int num = 25;
+     ```
+2. **Decrement:**
+     ```java
+      num--;
+     ```
+  The num-- operation reduces the value of num by 1. So, now num = 24.
+ 3. **Add 5:**
+ ```java
+   num += 5;
+ ```
+4. **Subtract 2:**
+ ```java
+   num -= 2;
+ ```
+This subtracts 2 from num. Now num = 29 - 2 = 27.
+5.  **Increment :**
+ ```java
+   num++;
+ ```
+The num++ operation increases num by 1. Now num = 27 + 1 = 28.
+6.  **Divide by 2 :**
+ ```java
+   num /= 2;
+ ```
+The num /= 2 operation divides num by 2. Now num = 28 / 2 = 14.
+
+ **Final Value: :**
+After all these operations, the value of num is 14.
+ ```java
+14
+ ```
 
 ### 📝 Exercise
 Make a simple program that has the following:
@@ -163,8 +198,90 @@ public class Main {
 My name is Reema
 My age after 5 years: 28
 ```
+---
+### 🔤 Input and output
+
+### 🔍🔁 Program Analysis and Flowcharts
+Exercise : Analysis and draw the flow chart of the following program:
+The program will take the user's age as input and calculates their date of birth (DOB) .
+
+Exercise :
+Analyze and draw the flow chart of the following program:
+The program will take an integer number as input and check if its even or odd . 
+
+
+## 1. Age to DOB Program
+
+### 🔍 Analysis
+- Takes the user's **age** as input.
+- Uses the current year (e.g., 2025) to calculate the **year of birth**.
+- Displays the estimated **Date of Birth**.
+
+### 🔁 Flowchart Steps
+1. Start
+2. Get current year
+3. Input user's age
+4. Calculate `DOB = current year - age`
+5. Display DOB
+6. End
+
+
+
+### 📝 Exercise
+Print your info(first name , last name ,age , nationality ) each one in a line. in java
+
+### ✅ Solution
+```java
+public class PersonalInfo {
+    public static void main(String[] args) {
+        // Declaring the variables
+        String firstName = "Reema";
+        String lastName = "Asker";
+        int age = 30; 
+        String nationality = "Palestinine";
+
+        // Printing each piece of information on a new line
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Age: " + age);
+        System.out.println("Nationality: " + nationality);
+    }
+}
+```
+📤 **Output:**
+```
+First Name: Reema
+Last Name: Asker
+Age: 30
+Nationality: Palestinine
+```
+
 
 ---
+## 2. Even or Odd Checker
+
+### 🔍 Analysis
+- Takes an **integer input**.
+- Checks if the number is divisible by 2.
+- If `number % 2 == 0` → Even  
+  Else → Odd
+
+### 🔁 Flowchart Steps
+1. Start
+2. Input a number
+3. Check `number % 2 == 0`
+4. If Yes → Display "Even"
+5. If No → Display "Odd"
+6. End
+
+---
+
+## 🧩 Flowchart Image
+
+<img src="assets/Flowchart exercies.png" width="300" />
+
+---
+
 
 ## 🔁 Loops
 
@@ -219,92 +336,6 @@ Enter number: 10
 Enter number: -1
 Sum = 14
 ```
-
----
-### 🔧 Operations
-
-1. **Initialization:**
-     ```java
-      int num = 25;
-     ```
-2. **Decrement:**
-     ```java
-      num--;
-     ```
-  The num-- operation reduces the value of num by 1. So, now num = 24.
- 3. **Add 5:**
- ```java
-   num += 5;
- ```
-4. **Subtract 2:**
- ```java
-   num -= 2;
- ```
-This subtracts 2 from num. Now num = 29 - 2 = 27.
-5.  **Increment :**
- ```java
-   num++;
- ```
-The num++ operation increases num by 1. Now num = 27 + 1 = 28.
-6.  **Divide by 2 :**
- ```java
-   num /= 2;
- ```
-The num /= 2 operation divides num by 2. Now num = 28 / 2 = 14.
-
- **Final Value: :**
-After all these operations, the value of num is 14.
- ```java
-14
- ```
----
-### 🔍🔁 Program Analysis and Flowcharts
-Exercise : Analysis and draw the flow chart of the following program:
-The program will take the user's age as input and calculates their date of birth (DOB) .
-
-Exercise :
-Analyze and draw the flow chart of the following program:
-The program will take an integer number as input and check if its even or odd . 
-
-
-## 1. Age to DOB Program
-
-### 🔍 Analysis
-- Takes the user's **age** as input.
-- Uses the current year (e.g., 2025) to calculate the **year of birth**.
-- Displays the estimated **Date of Birth**.
-
-### 🔁 Flowchart Steps
-1. Start
-2. Get current year
-3. Input user's age
-4. Calculate `DOB = current year - age`
-5. Display DOB
-6. End
-
----
-
-## 2. Even or Odd Checker
-
-### 🔍 Analysis
-- Takes an **integer input**.
-- Checks if the number is divisible by 2.
-- If `number % 2 == 0` → Even  
-  Else → Odd
-
-### 🔁 Flowchart Steps
-1. Start
-2. Input a number
-3. Check `number % 2 == 0`
-4. If Yes → Display "Even"
-5. If No → Display "Odd"
-6. End
-
----
-
-## 🧩 Flowchart Image
-
-<img src="assets/Flowchart exercies.png" width="300" />
 
 ---
 
