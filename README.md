@@ -304,7 +304,7 @@ The program will take an integer number as input and check if its even or odd .
 
 ## 🧩 Flowchart Image
 
-![Flow chart image](assets/Flowchart exercies.png)
+<img src="assets/Flowchart exercies.png" width="300" />
 
 ---
 
