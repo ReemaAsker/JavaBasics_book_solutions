@@ -1,12 +1,13 @@
-# 📘 Java Book – Exercises & Solutions with Output
+# 📘 Java Book – Exercises & Solutions (Eng.Reema Ali Asker)
 
 This document provides all the exercises from the book along with their solutions, grouped by topic and includes example outputs.
 
 ---
 
 ## 🗂 Table of Contents
-
+- [✅ Basic Tasks](#-basic-tasks)
 - [🔤 Input, Variables & Parsing](#-input-variables--parsing)
+- [🔧 Operations](#-operations)
 - [🔁 Loops](#-loops)
 - [📦 Arrays](#-arrays)
 - [🔧 Methods](#-methods)
@@ -15,12 +16,136 @@ This document provides all the exercises from the book along with their solution
 
 ---
 
-## 🔤 Input, Variables & Parsing
+## ✅ Basic Tasks
 
 ### 📝 Exercise
-1. Print your name
-2. Store age in a String, convert to integer
-3. Add 5 years and print
+Create a class FirstLecture, add a main method 
+
+### ✅ Solution
+```java
+public class FirstLecture {
+    public static void main(String[] args) {
+   
+    }
+}
+```
+
+### 📝 Exercise
+Write suitable import statements to use Arrays and JOptionPane.
+
+### ✅ Solution
+```java
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+}
+```
+
+### 📝 Exercise
+what is the Suitable type for storing the following values :
+(10 : ------------------ , -200 :------------------ , 57.6879: --------------- ,2,147,483,699 : ‘$’:------------“My name is Reema”: ------------------, 
+the value of the answer "Are you a student? ------------------     ) 
+
+### ✅ Solution
+
+1. **10**  
+   - **Suitable type**: `byte`  
+   - **Memory usage**: 1 byte  
+   - **Reasoning**: The value `10` fits within the `byte` range (-128 to 127), making it the most memory-efficient choice.  
+   - Example: `byte num = 10;`
+
+2. **-200**  
+   - **Suitable type**: `short`  
+   - **Memory usage**: 2 bytes  
+   - **Reasoning**: The value `-200` fits within the `short` range (-32,768 to 32,767), making `short` more suitable than `int`.  
+   - Example: `short num = -200;`
+
+3. **57.6879**  
+   - **Suitable type**: `float`  
+   - **Memory usage**: 4 bytes  
+   - **Reasoning**: Since the value is a floating-point number, `float` is the appropriate choice for less precision and reduced memory consumption.  
+   - Example: `float num = 57.6879f;` (Note the `f` suffix for `float`)
+
+4. **2,147,483,699**  
+   - **Suitable type**: `long`  
+   - **Memory usage**: 8 bytes  
+   - **Reasoning**: The value exceeds the `int` range, so `long` is required to store this large number.  
+   - Example: `long num = 2_147_483_699L;` (Note the `L` suffix for `long`)
+
+5. **'$'**  
+   - **Suitable type**: `char`  
+   - **Memory usage**: 2 bytes  
+   - **Reasoning**: A single character can be efficiently stored using the `char` type, which is 2 bytes.  
+   - Example: `char symbol = '$';`
+
+6. **"My name is Reema"**  
+   - **Suitable type**: `String`  
+   - **Memory usage**: Depends on string length (2 bytes per character in UTF-16 encoding)  
+   - **Reasoning**: A sequence of characters is best stored as a `String`.  
+   - Example: `String name = "My name is Reema";`
+
+7. **"Are you a student?"**  
+   - **Suitable type**: `String`  
+   - **Memory usage**: Depends on string length (2 bytes per character in UTF-16 encoding)  
+   - **Reasoning**: The question should be stored as a `String`.  
+   - Example: `String question = "Are you a student?";`
+
+### Summary of Memory Usage:
+
+| Value                    | Suitable Type | Memory Usage |
+|--------------------------|---------------|--------------|
+| **10**                   | `byte`        | 1 byte       |
+| **-200**                  | `short`       | 2 bytes      |
+| **57.6879**               | `float`       | 4 bytes      |
+| **2,147,483,699**         | `long`        | 8 bytes      |
+| **'$'**                   | `char`        | 2 bytes      |
+| **"My name is Reema"**    | `String`      | Variable (2 bytes per character) |
+| **"Are you a student?"**  | `String`      | Variable (2 bytes per character) |
+---
+### 📝 Exercise
+How can we store Reema Asker in Java?
+How can we store 1999.6 with best data type in Java?
+How can we store true in Java?
+### ✅ Solution
+1. **Storing "Reema Asker" in Java:**
+   - **Suitable type**: `String`
+   - **Reasoning**: A sequence of characters is best stored as a `String` in Java.
+   - **Example**:
+     ```java
+     String name = "Reema Asker";
+     ```
+
+2. **Storing 1999.6 in Java:**
+   - **Suitable type**: `double`
+   - **Reasoning**: For storing decimal values with the best precision, `double` is typically the best choice as it uses 8 bytes and provides more precision than `float`.
+   - **Example**:
+     ```java
+     double value = 1999.6;
+     ```
+
+3. **Storing `true` in Java:**
+   - **Suitable type**: `boolean`
+   - **Reasoning**: The `boolean` type is used for binary values such as `true` or `false`.
+   - **Example**:
+     ```java
+     boolean isTrue = true;
+     ```
+
+### Summary:
+
+| Value         | Suitable Type | Example Code                         |
+|---------------|---------------|--------------------------------------|
+| "Reema Asker" | `String`      | `String name = "Reema Asker";`       |
+| 1999.6        | `double`      | `double value = 1999.6;`            |
+| true          | `boolean`     | `boolean isTrue = true;`             |
+---
+### 🔤 Input, Variables & Parsing
+
+### 📝 Exercise
+Make a simple program that has the following:
+1. print your name
+2. create a variable called my age with string data type and put your age .
+3. convert the age as number (int)
+4. print your age with added 5 years.
 
 ### ✅ Solution
 ```java
@@ -94,6 +219,97 @@ Enter number: 10
 Enter number: -1
 Sum = 14
 ```
+
+---
+### 🔧 Operations
+
+1. **Initialization:**
+     ```java
+      int num = 25;
+     ```
+2. **Decrement:**
+     ```java
+      num--;
+     ```
+  The num-- operation reduces the value of num by 1. So, now num = 24.
+ 3. **Add 5:**
+ ```java
+   num += 5;
+ ```
+4. **Subtract 2:**
+ ```java
+   num -= 2;
+ ```
+This subtracts 2 from num. Now num = 29 - 2 = 27.
+5.  **Increment :**
+ ```java
+   num++;
+ ```
+The num++ operation increases num by 1. Now num = 27 + 1 = 28.
+6.  **Divide by 2 :**
+ ```java
+   num /= 2;
+ ```
+The num /= 2 operation divides num by 2. Now num = 28 / 2 = 14.
+
+ **Final Value: :**
+After all these operations, the value of num is 14.
+ ```java
+14
+ ```
+---
+### 🔍🔁 Program Analysis and Flowcharts
+Exercise : Analysis and draw the flow chart of the following program:
+The program will take the user's age as input and calculates their date of birth (DOB) .
+
+Exercise :
+Analyze and draw the flow chart of the following program:
+The program will take an integer number as input and check if its even or odd . 
+
+
+## 1. Age to DOB Program
+
+### 🔍 Analysis
+- Takes the user's **age** as input.
+- Uses the current year (e.g., 2025) to calculate the **year of birth**.
+- Displays the estimated **Date of Birth**.
+
+### 🔁 Flowchart Steps
+1. Start
+2. Get current year
+3. Input user's age
+4. Calculate `DOB = current year - age`
+5. Display DOB
+6. End
+
+---
+
+## 2. Even or Odd Checker
+
+### 🔍 Analysis
+- Takes an **integer input**.
+- Checks if the number is divisible by 2.
+- If `number % 2 == 0` → Even  
+  Else → Odd
+
+### 🔁 Flowchart Steps
+1. Start
+2. Input a number
+3. Check `number % 2 == 0`
+4. If Yes → Display "Even"
+5. If No → Display "Odd"
+6. End
+
+---
+
+## 🧩 Flowchart Image
+
+![Flowchart](path/to/your/image.png)
+
+> Replace `path/to/your/image.png` with the actual path or GitHub URL where the image is uploaded (e.g., in your repo's `assets/` folder).
+
+
+
 
 ---
 
