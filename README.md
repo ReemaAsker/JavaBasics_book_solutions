@@ -5,6 +5,7 @@ This document provides all the exercises from the book along with their solution
 ---
 
 ## 🗂 Table of Contents
+- [🛠️ Java Development Environment Setup Guide](#-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
 - [🔤 Input,Output](#-input-variables--parsing)
@@ -15,7 +16,61 @@ This document provides all the exercises from the book along with their solution
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
 ---
+## 🛠️ Java Development Environment Setup Guide
+This guide walks you through installing Java Development Kit (JDK) and setting up your development environment on Windows. Follow these steps to get started with Java programming.
 
+
+## 1. Download Java Development Kit (JDK)
+
+1. Visit the [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase-downloads.html) page.
+2. Scroll to the "JDK Downloads" section and click on the license agreement.
+3. Choose your system version (Windows x64 for most users).
+4. Click the download link to start downloading the installer.
+
+![Download JDK](https://www.javatpoint.com/images/java-jdk-installation-1.png)
+
+---
+
+## 2. Install the JDK
+
+1. Run the downloaded `.exe` file.
+2. Follow the setup wizard:
+   - Click `Next`.
+   - Choose the installation path or keep default.
+   - Click `Install`.
+
+3. After installation completes, click `Finish`.
+
+---
+
+## 3. Set Up Environment Variables
+
+1. Right-click `This PC` → `Properties` → `Advanced system settings`.
+2. Click on **Environment Variables**.
+3. Under **System variables**, click **New**:
+   - Variable name: `JAVA_HOME`
+   - Variable value: `C:\Program Files\Java\jdk-17` (adjust as needed)
+4. Edit the `Path` variable:
+   - Add: `C:\Program Files\Java\jdk-17\bin`
+
+![Environment Variables](https://www.tutorialspoint.com/java/images/java_environment_setup1.jpg)
+
+---
+
+## 4. Verify the Installation
+
+Open **Command Prompt** and type:
+
+```bash
+java -version
+```
+
+Expected Output
+```bash
+java version "17.0.1"
+```
+
+---
 ## ✅ Basic Tasks
 
 ### 📝 Exercise
