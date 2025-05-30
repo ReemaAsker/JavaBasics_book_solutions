@@ -69,7 +69,47 @@ Expected Output
 ```bash
 java version "17.0.1"
 ```
+## 5. Install an IDE (Optional but Recommended)
 
+### 🔷 IntelliJ IDEA
+
+- Download from [JetBrains IntelliJ](https://www.jetbrains.com/idea/download/)
+- Install the **Community Edition**.
+- Configure IntelliJ to use the installed JDK.
+
+> 💡 When creating a new project, IntelliJ will prompt you to select a JDK. Choose the one you installed earlier (e.g., `jdk-17`).
+
+---
+
+### 🔷 Eclipse
+
+- Download from [Eclipse Downloads](https://www.eclipse.org/downloads/)
+- Install **Eclipse IDE for Java Developers**.
+- Launch Eclipse and set the installed JDK in:
+Window → Preferences → Java → Installed JREs
+
+---
+
+## 6. Write and Run Your First Java Program
+
+1. Open your IDE (IntelliJ or Eclipse).
+2. Create a new Java project.
+3. Create a new Java class named `HelloWorld.java`.
+4. Paste the following code:
+
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+      System.out.println("Hello, World!");
+  }
+}
+```
+Run the program.
+
+✅ You should see this output in the console:
+```java
+Hello, World!
+```
 ---
 ## ✅ Basic Tasks
 
