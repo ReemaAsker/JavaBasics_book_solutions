@@ -5,6 +5,7 @@ This document provides all the exercises from the book along with their solution
 ---
 
 ## 🗂 Table of Contents
+- [🛠️🔍 Understanding of JRE ,JDK ,JVM]
 - [🛠️ Java Development Environment Setup Guide](#-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
@@ -15,6 +16,67 @@ This document provides all the exercises from the book along with their solution
 - [🔁 Recursion](#-recursion)
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
+---
+# 🛠️🔍 Understanding JRE, JDK, and JVM
+
+When working with Java, you'll encounter three essential components: **JRE**, **JDK**, and **JVM**. Here's a simple breakdown to understand their differences and how they work together.
+
+---
+
+## 🔍 What Are They?
+
+### **JVM (Java Virtual Machine)**  
+- **Definition**: A virtual machine that runs Java bytecode.
+- **Purpose**: Converts compiled Java code (bytecode) into machine code, making Java platform-independent.
+- **Key Role**: Executes programs.
+
+### **JRE (Java Runtime Environment)**  
+- **Definition**: A runtime environment required to run Java applications.
+- **Purpose**: Includes JVM and libraries required for running Java applications.
+- **Key Role**: Ensures Java programs can run.
+
+### **JDK (Java Development Kit)**  
+- **Definition**: A complete package for Java development.
+- **Purpose**: Includes tools to write, compile, and debug Java programs, as well as JRE.
+- **Key Role**: Enables Java development.
+
+---
+
+## 📊 Comparison Chart
+
+| Feature             | JVM                      | JRE                       | JDK                       |
+|---------------------|--------------------------|---------------------------|---------------------------|
+| **Definition**      | Virtual machine to run Java programs | Environment to run Java programs | Toolkit to develop Java programs |
+| **Includes**        | Bytecode interpreter     | JVM + libraries           | JRE + development tools   |
+| **Use Case**        | Runs Java programs       | Executes Java programs    | Develops and runs Java programs |
+| **Tools**           | None                    | Standard libraries        | Compiler, debugger, tools |
+
+---
+
+## 🚦 How They Work Together
+
+1. **You write a Java program.**
+2. **JDK**: Compiles your code into bytecode using tools like `javac` (Java Compiler).
+3. **JRE**: Provides the runtime environment with libraries to execute the bytecode.
+4. **JVM**: Converts bytecode into machine code for your specific operating system and hardware.
+
+
+
+## 🗺️ Conceptual Diagram
+
+```plaintext
++--------------------------------+
+|            JDK                 |
+|--------------------------------|
+| Compiler | Debugger | Tools    |
+|          +---------------------+
+|          |         JRE         |
+|          +---------------------+
+|          | JVM + Libraries     |
+|          +---------------------+
+|          |     JVM             |
+|          +---------------------+
+```
 ---
 # 🛠️ Java Development Environment Setup Guide
 
