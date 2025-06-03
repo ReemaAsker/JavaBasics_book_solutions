@@ -16,60 +16,95 @@ This document provides all the exercises from the book along with their solution
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
 ---
-## 🛠️ Java Development Environment Setup Guide
-This guide walks you through installing Java Development Kit (JDK) and setting up your development environment on Windows. Follow these steps to get started with Java programming.
+# 🛠️ Java Development Environment Setup Guide
 
+This guide provides step-by-step instructions to set up the Java Development Kit (JDK) and configure your environment variables on Windows and macOS. Follow this guide to prepare your system for Java development and related tools like [Apache ANT](https://documentation.provar.com/documentation/devops/apache-ant/ant-licensing/).
 
-## 1. Download Java Development Kit (JDK)
+---
 
-1. Visit the [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase-downloads.html) page.
-2. Scroll to the "JDK Downloads" section and click on the license agreement.
-3. Choose your system version (Windows x64 for most users).
-4. Click the download link to start downloading the installer.
+## 📥 Step 1: Download and Install JDK
+
+### Download JDK
+
+We recommend [Amazon Corretto 11](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html) for its compatibility and ease of use. Supported versions include:
+
+- 11.0.21.9
+- 11.0.20.1
+- 11.0.19.7
+- 11.0.18.10
+- 11.0.16.1
+
+Alternatively, you can download the JDK from [Oracle's official page](https://www.oracle.com/java/technologies/javase-downloads.html). 
+
+1. Scroll to the "JDK Downloads" section.
+2. Agree to the license terms.
+3. Select your system version (e.g., Windows x64 or macOS).
+4. Click the download link to start the download.
 
 ![Download JDK](https://www.javatpoint.com/images/java-jdk-installation-1.png)
 
----
+### Install JDK
 
-## 2. Install the JDK
-
-1. Run the downloaded `.exe` file.
+1. Locate and run the downloaded installer (`.exe` for Windows or `.pkg` for macOS).
 2. Follow the setup wizard:
-   - Click `Next`.
-   - Choose the installation path or keep default.
-   - Click `Install`.
+   - Click **Next**.
+   - Select the installation path (or use the default).
+   - Click **Install**.
+3. After installation completes, click **Finish**.
 
-3. After installation completes, click `Finish`.
 
----
-
-## 3. Set Up Environment Variables
-
-1. Right-click `This PC` → `Properties` → `Advanced system settings`.
-2. Click on **Environment Variables**.
-3. Under **System variables**, click **New**:
-   - Variable name: `JAVA_HOME`
-   - Variable value: `C:\Program Files\Java\jdk-17` (adjust as needed)
-4. Edit the `Path` variable:
-   - Add: `C:\Program Files\Java\jdk-17\bin`
-
-![Environment Variables](https://www.tutorialspoint.com/java/images/java_environment_setup1.jpg)
 
 ---
 
-## 4. Verify the Installation
+## ⚙️ Step 2: Configure Environment Variables
 
-Open **Command Prompt** and type:
+After installing the JDK, configure your system's environment variables to ensure Java is accessible from the command line.
 
-```bash
-java -version
-```
+### On Windows
 
-Expected Output
-```bash
-java version "17.0.1"
-```
-## 5. Install an IDE (Optional but Recommended)
+1. **Open System Properties**:  
+   - Right-click **This PC** → **Properties** → **Advanced system settings**.  
+   - In the **Advanced** tab, click **Environment Variables**.
+
+   ![System Properties](https://documentation.provar.com/wp-content/uploads/2020/04/system-control-panel-advanced-tab.jpg)
+
+2. **Add JAVA_HOME**:  
+   - Under **System variables**, click **New**.
+   - Set:
+     - **Variable name**: `JAVA_HOME`
+     - **Variable value**: `C:\Program Files\Java\jdk-11.0.21_9` (or your installation path).
+
+3. **Update the Path Variable**:  
+   - Select the `Path` variable and click **Edit**.
+   - Add a new entry: `%JAVA_HOME%\bin`.
+
+4. **Save and Restart**:  
+   - Click **OK** to save changes.
+   - Restart your system.
+
+5. **Verify Installation**:  
+   Open Command Prompt and type:
+   ```bash
+   java -version
+
+
+### On Mac
+
+1. **Locate or Create the Profile File**:  
+   - Open Finder and navigate to your home directory (**Shift + Command + H**).
+   - Show hidden files by pressing **Command + Shift + Period**.
+   - Open or create a `.bash_profile` file (or `.zshrc` for newer macOS versions using zsh).
+
+   ![Mac Home Directory](https://documentation.provar.com/wp-content/uploads/2020/09/7-1.png)
+
+2. **Add Environment Variables**:  
+   Edit the profile file to include the following lines:
+   ```bash
+   export JAVA_HOME=$(/usr/libexec/java_home)
+   export PATH=$PATH:$JAVA_HOME/bin
+---
+
+## Install an IDE (Optional but Recommended)
 
 ### 🔷 IntelliJ IDEA
 
