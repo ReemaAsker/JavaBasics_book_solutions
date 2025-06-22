@@ -210,16 +210,20 @@ Hello, World!
 ---
 ## ✅ Basic Tasks
 
+
 ### 📝 Exercise
 Write suitable import statements to use Arrays and JOptionPane.
 
-To use `Arrays` and `JOptionPane` in a Java program, you need to import the appropriate classes from their respective packages.
-
-### ✅ Java Code with Suitable Import Statements
+### ✅ Solution
 ```java
-import java.util.Arrays;               // To use utility methods for arrays, like sorting or searching
-import javax.swing.JOptionPane;        // To use GUI dialog boxes for input/output
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+}
 ```
+
+
+
+
 ### 📝 Exercise
 Create a class FirstLecture, add a main method 
 
@@ -229,16 +233,6 @@ public class FirstLecture {
     public static void main(String[] args) {
    
     }
-}
-```
-
-### 📝 Exercise
-Write suitable import statements to use Arrays and JOptionPane.
-
-### ✅ Solution
-```java
-import java.util.Arrays;
-import javax.swing.JOptionPane;
 }
 ```
 
