@@ -1562,11 +1562,11 @@ public class SortArray {
 
 ```
 📤 **Input:**
-```
+```text
 5
 30 10 50 20 40```
 📤 **Output:**
-```
+```text
 Sorted array in ascending order:
 10 20 30 40 50 
 ```
