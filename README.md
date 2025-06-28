@@ -605,6 +605,7 @@ public class StudentInfo {
 
 ```
 # Exercise "4" :
+
 Exercise : Write a java program that allow user enter 3 numbers and then print the biggest one.
 ``` java
 import javax.swing.JOptionPane;
@@ -631,6 +632,9 @@ public class FindBiggestNumber {
     }
 }
 ```
+Output:
+<img src="assets/excercise4_input_by_gui.png"  />
+
 ## Input by Console
 
 # Exercise : Write a java program let user enter his information (name , specialize , age ) and then print it in good way.
