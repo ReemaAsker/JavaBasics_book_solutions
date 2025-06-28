@@ -956,8 +956,7 @@ public class ProductAndWarning {
 ```
 Output 
 
-<img src= " exercise2.png" >
-
+<img src= "assets/exercise2_confirm_dialog.png" >
 
 ## 🔁 Loops
 
