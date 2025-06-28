@@ -1069,7 +1069,7 @@ Enter operator: /
 ## 🔁 Loops
 
 ## Exercise: Draw the flow chart then Write a java code that print “java” with its version from 1 to 23 :Output : java 1 , java 2 ,java 3 …… , java23, :
-<img src= "assets/excercise1_loops.png" >
+<img src= "assets/excercise1_loops.png"  height ="300" width= "300">
 
 
 ## Exercise: Write a java code that implement the following flowchart:
