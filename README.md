@@ -1483,34 +1483,159 @@ for (int i = arr.length - 1; i >= 0; i--) {
 
 ## 🔧 Methods
 
-### Check even or odd
+### 1. Check if a number is even or odd  
 ```java
-public static void checkEvenOdd(int n) {
-    if (n % 2 == 0) System.out.println("Even");
-    else System.out.println("Odd");
+public static String checkEvenOdd(int num) {
+    return (num % 2 == 0) ? "Even" : "Odd";
 }
 ```
-📤 **Output (checkEvenOdd(7)):**
-```
-Odd
+📤 **Usage Example:**  
+```java
+System.out.println(checkEvenOdd(10)); // Output: Even
+System.out.println(checkEvenOdd(7));  // Output: Odd
 ```
 
-### Sum of digits
+---
+
+### 2. Check if a number is positive, negative, or zero  
 ```java
-public static int sumDigits(int n) {
+public static String checkPosNegZero(int num) {
+    if (num > 0) return "Positive";
+    else if (num < 0) return "Negative";
+    else return "Zero";
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(checkPosNegZero(5));   // Output: Positive
+System.out.println(checkPosNegZero(-3));  // Output: Negative
+System.out.println(checkPosNegZero(0));   // Output: Zero
+```
+
+---
+
+### 3. Print numbers from 1 to 20 using a loop  
+```java
+public static void printNumbers() {
+    for (int i = 1; i <= 20; i++) {
+        System.out.println(i);
+    }
+}
+```
+📤 **Usage Example:**  
+```java
+printNumbers();
+```
+
+---
+
+### 4. Convert minutes into hours and minutes  
+```java
+public static String convertMinutes(int totalMinutes) {
+    int hours = totalMinutes / 60;
+    int minutes = totalMinutes % 60;
+    return hours + " hour(s) and " + minutes + " minute(s)";
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(convertMinutes(130));  // Output: 2 hour(s) and 10 minute(s)
+```
+
+---
+
+### 5. Check if a character is a vowel  
+```java
+public static boolean isVowel(char ch) {
+    ch = Character.toLowerCase(ch);
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(isVowel('A')); // true
+System.out.println(isVowel('b')); // false
+```
+
+---
+
+### 6. Return the number of digits in a number  
+```java
+public static int countDigits(int num) {
+    int count = 0;
+    num = Math.abs(num);
+    do {
+        count++;
+        num /= 10;
+    } while (num != 0);
+    return count;
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(countDigits(12345));  // Output: 5
+System.out.println(countDigits(-789));   // Output: 3
+```
+
+---
+
+### 7. Check if a number is a perfect number  
+```java
+public static boolean isPerfectNumber(int num) {
+    if (num <= 1) return false;
     int sum = 0;
-    while (n != 0) {
-        sum += n % 10;
-        n /= 10;
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) sum += i;
+    }
+    return sum == num;
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(isPerfectNumber(6));   // true (1+2+3=6)
+System.out.println(isPerfectNumber(28));  // true (1+2+4+7+14=28)
+System.out.println(isPerfectNumber(10));  // false
+```
+
+---
+
+### 8. Return the sum of digits of a number  
+```java
+public static int sumOfDigits(int num) {
+    num = Math.abs(num);
+    int sum = 0;
+    while (num > 0) {
+        sum += num % 10;
+        num /= 10;
     }
     return sum;
 }
 ```
-📤 **Output (sumDigits(123)):**
-```
-6
+📤 **Usage Example:**  
+```java
+System.out.println(sumOfDigits(1234));  // Output: 10
+System.out.println(sumOfDigits(-56));   // Output: 11
 ```
 
+---
+
+### 9. Return the reverse of a number  
+```java
+public static int reverseNumber(int num) {
+    int reversed = 0;
+    while (num != 0) {
+        int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+    return reversed;
+}
+```
+📤 **Usage Example:**  
+```java
+System.out.println(reverseNumber(123));   // Output: 321
+System.out.println(reverseNumber(-456));  // Output: -654 (Note: negative sign ignored here)
+```
 ---
 
 ## 🔁 Recursion
