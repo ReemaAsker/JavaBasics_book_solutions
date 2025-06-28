@@ -1068,291 +1068,74 @@ Enter operator: /
 
 ## 🔁 Loops
 
-## flowchart > code :
+## Exercise: Draw the flow chart then Write a java code that print “java” with its version from 1 to 23 :Output : java 1 , java 2 ,java 3 …… , java23, :
+<img src= "assets/excercise1_loops.png" >
 
-<!-- Exercise 1: Print numbers from 1 to 10 -->
-<description>
-Write a Java code that prints numbers from 1 to 10.
-</description>
-<code>
-class Main {
+
+## Exercise: Write a java code that implement the following flowchart:
+<img src= "assets/exercise2_loops_flowchart_to_code" >
+
+```java
+public class FlowchartExample {
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        // Step 1: Initialize the variable i to 2
+        int i = 2;
+
+        // Step 2: Start the loop with the condition i <= 6
+        while (i <= 6) {
+            // Step 3: Print i + 1
+            System.out.println("Output: " + (i + 1));
+
+            // Step 4: Update the value of i by adding 2
+            i = i + 2;
         }
     }
 }
-</code>
 
-<!-- Exercise 2: Sum numbers from 1 to 10 -->
-<description>
-Write a Java code that sums all numbers from 1 to 10.
-</description>
-<code>
-class Main {
-    public static void main(String[] args) {
-        int sum = 0;
-        for (int i = 1; i <= 10; i++) {
-            sum += i;
-        }
-        System.out.println("Sum: " + sum);
-    }
-}
-</code>
+```
 
-<!-- Exercise 3: Sum all positive numbers entered by user -->
-<description>
-Write a Java code that sums all positive numbers that the user enters.
-</description>
-<code>
-import java.util.Scanner;
+## Explanation
 
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int sum = 0;
-        int number;
+### Understanding the Flowchart
 
-        do {
-            System.out.print("Enter a positive number (or negative to stop): ");
-            number = scanner.nextInt();
-            if (number > 0) {
-                sum += number;
-            }
-        } while (number > 0);
+1. **Start Point:**  
+   The **"Start"** symbol at the top indicates the beginning of the program.
 
-        System.out.println("Sum: " + sum);
-    }
-}
-</code>
+2. **Initialization:**  
+   The rectangle with `i = 2` represents an action where the variable `i` is initialized with a value of `2`.
 
-<!-- Exercise 4: Print menu based on user input -->
-<description>
-Write a Java code that prints a menu every time the user enters 1, 2, or 3. The menu should print at least once.
-</description>
-<code>
-class Main {
-    public static void main(String[] args) {
-        int choice;
-        do {
-            System.out.println("Hello, our menu today is:");
-            System.out.println("1. Chicken");
-            System.out.println("2. Fish");
-            System.out.println("3. Pepsi");
-            choice = 1; // Default to show menu once
-        } while (choice == 1 || choice == 2 || choice == 3);
-    }
-}
-</code>
+3. **Condition Check:**  
+   The diamond (`i <= 6?`) checks if `i` is less than or equal to `6`. This is a decision-making step:
+   - If **true**, proceed to the next steps (print and update `i`).
+   - If **false**, terminate the process.
 
-<!-- Exercise 5: Print numbers from 90 to 100 -->
-<description>
-Write a Java code that prints numbers from 90 to 100.
-</description>
-<code>
-class Main {
-    public static void main(String[] args) {
-        for (int i = 90; i <= 100; i++) {
-            System.out.println(i);
-        }
-    }
-}
-</code>
+4. **Print Statement:**  
+   When the condition is true, the program executes the statement `print i + 1`.
 
-<!-- Exercise 6: Print multiplication table -->
-<description>
-Write a Java code to print the multiplication table of a number entered by the user.
-</description>
-<code>
-import java.util.Scanner;
+5. **Update the Variable:**  
+   After printing, the value of `i` is incremented by `2` using the statement `i = i + 2`.
 
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number for its multiplication table: ");
-        int num = scanner.nextInt();
+6. **Iteration:**  
+   After updating `i`, the flow returns to the condition (`i <= 6`) to check again. This loop continues until `i > 6`.
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " x " + i + " = " + (num * i));
-        }
-    }
-}
-</code>
+7. **End:**  
+   When the condition becomes false (`i > 6`), the process ends, as indicated by the "Stop" symbol.
 
-<!-- Exercise 7: Sum even numbers until user enters 0 -->
-<description>
-Write a Java code that sums all even numbers entered by the user. The loop finishes when the user enters 0.
-</description>
-<code>
-import java.util.Scanner;
+## Example Output
 
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int sum = 0, num;
+```text
+Output: 3
+Output: 5
+Output: 7
+```
 
-        do {
-            System.out.print("Enter an even number (or 0 to stop): ");
-            num = scanner.nextInt();
-            if (num % 2 == 0 && num != 0) {
-                sum += num;
-            }
-        } while (num != 0);
-
-        System.out.println("Sum of even numbers: " + sum);
-    }
-}
-</code>
-
-<!-- Exercise 8: Print "Hello" for every number except -1 -->
-<description>
-Write a Java code that prints "Hello" each time the user enters a number except -1. The "Hello" should print at least once.
-</description>
-<code>
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int num;
-
-        do {
-            System.out.println("Hello");
-            System.out.print("Enter a number (or -1 to stop): ");
-            num = scanner.nextInt();
-        } while (num != -1);
-    }
-}
-</code>
-
-<!-- Exercise 9: Multiplication table using JOptionPane -->
-<description>
-Write a Java code that prints the multiplication table of a number entered by the user using `JOptionPane`.
-</description>
-<code>
-import javax.swing.JOptionPane;
-
-class Main {
-    public static void main(String[] args) {
-        String input = JOptionPane.showInputDialog("Enter a number for its multiplication table:");
-        int num = Integer.parseInt(input);
-
-        StringBuilder table = new StringBuilder();
-        for (int i = 1; i <= 10; i++) {
-            table.append(num).append(" x ").append(i).append(" = ").append(num * i).append("\n");
-        }
-
-        JOptionPane.showMessageDialog(null, table.toString());
-    }
-}
-</code>
-
-<!-- Exercise 10: Print even and odd numbers in range -->
-<description>
-Write a Java code that prints the even and odd numbers in the range of 1 to 10.
-</description>
-<code>
-class Main {
-    public static void main(String[] args) {
-        System.out.println("Even numbers:");
-        for (int i = 1; i <= 10; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
-        }
-        System.out.println("Odd numbers:");
-        for (int i = 1; i <= 10; i++) {
-            if (i % 2 != 0) {
-                System.out.println(i);
-            }
-        }
-    }
-}
-</code>
-
-<!-- Exercise 11: Reverse a number -->
-<description>
-Write a Java code that prints the reverse of a number entered by the user. (e.g., 5236 → 6325)
-</description>
-<code>
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        int reversed = 0;
-
-        while (number != 0) {
-            int digit = number % 10;
-            reversed = reversed * 10 + digit;
-            number /= 10;
-        }
-
-        System.out.println("Reversed number: " + reversed);
-    }
-}
-</code>
-
-<!-- Task: Calculator -->
-<description>
-Write a Java code to create a calculator that performs addition, subtraction, multiplication, and division.
-</description>
-<code>
-import java.util.Scanner;
-
-class Calculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter first number: ");
-        double num1 = scanner.nextDouble();
-
-        System.out.print("Enter operator (+, -, *, /): ");
-        char operator = scanner.next().charAt(0);
-
-        System.out.print("Enter second number: ");
-        double num2 = scanner.nextDouble();
-
-        double result;
-
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                if (num2 != 0) {
-                    result = num1 / num2;
-                } else {
-                    System.out.println("Error: Division by zero");
-                    return;
-                }
-                break;
-            default:
-                System.out.println("Error: Invalid operator");
-                return;
-        }
-
-        System.out.println("Result: " + result);
-    }
-}
-</code>
-
-
-### 1. Print numbers from 1 to 10
+### 1. Print numbers from 1 to 10  
 ```java
 for (int i = 1; i <= 10; i++) {
     System.out.println(i);
 }
 ```
-📤 **Output:**
+📤 **Output:**  
 ```
 1
 2
@@ -1366,37 +1149,304 @@ for (int i = 1; i <= 10; i++) {
 10
 ```
 
-### 2. Sum numbers from 1 to 10
+---
+
+### 2. Sum numbers from 1 to 10  
 ```java
 int sum = 0;
 for (int i = 1; i <= 10; i++) {
     sum += i;
 }
-System.out.println("Sum = " + sum);
+System.out.println("Sum: " + sum);
 ```
-📤 **Output:**
+📤 **Output:**  
 ```
-Sum = 55
+Sum: 55
 ```
 
-### 3. Sum all positive numbers until a negative is entered
+---
+
+### 3. Sum all positive numbers entered by the user  
 ```java
-Scanner sc = new Scanner(System.in);
-int sum = 0, num;
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+int sum = 0;
+int number;
+
 do {
-    System.out.print("Enter number: ");
-    num = sc.nextInt();
-    if (num > 0) sum += num;
-} while (num >= 0);
-System.out.println("Sum = " + sum);
+    System.out.print("Enter a positive number (or negative to stop): ");
+    number = scanner.nextInt();
+    if (number > 0) {
+        sum += number;
+    }
+} while (number > 0);
+
+System.out.println("Sum: " + sum);
 ```
-📤 **Output (Example):**
+📤 **Output Example:**  
 ```
-Enter number: 4
-Enter number: 10
-Enter number: -1
-Sum = 14
+Enter a positive number (or negative to stop): 5  
+Enter a positive number (or negative to stop): 10  
+Enter a positive number (or negative to stop): -1  
+Sum: 15
 ```
+
+---
+
+### 4. Print menu based on user input  
+```java
+int choice;
+do {
+    System.out.println("Hello, our menu today is:");
+    System.out.println("1. Chicken");
+    System.out.println("2. Fish");
+    System.out.println("3. Pepsi");
+    choice = 1; // Default to show menu once
+} while (choice == 1 || choice == 2 || choice == 3);
+```
+📤 **Output Example:**  
+```
+Hello, our menu today is:  
+1. Chicken  
+2. Fish  
+3. Pepsi  
+```
+
+---
+
+### 5. Print numbers from 90 to 100  
+```java
+for (int i = 90; i <= 100; i++) {
+    System.out.println(i);
+}
+```
+📤 **Output:**  
+```
+90  
+91  
+92  
+93  
+94  
+95  
+96  
+97  
+98  
+99  
+100
+```
+
+---
+
+### 6. Print multiplication table  
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter a number for its multiplication table: ");
+int num = scanner.nextInt();
+
+for (int i = 1; i <= 10; i++) {
+    System.out.println(num + " x " + i + " = " + (num * i));
+}
+```
+📤 **Output Example:**  
+```
+Enter a number for its multiplication table: 3  
+3 x 1 = 3  
+3 x 2 = 6  
+...  
+3 x 10 = 30  
+```
+
+---
+
+### 7. Sum even numbers until user enters 0  
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+int sum = 0, num;
+
+do {
+    System.out.print("Enter an even number (or 0 to stop): ");
+    num = scanner.nextInt();
+    if (num % 2 == 0 && num != 0) {
+        sum += num;
+    }
+} while (num != 0);
+
+System.out.println("Sum of even numbers: " + sum);
+```
+📤 **Output Example:**  
+```
+Enter an even number (or 0 to stop): 4  
+Enter an even number (or 0 to stop): 8  
+Enter an even number (or 0 to stop): 0  
+Sum of even numbers: 12
+```
+
+---
+
+### 8. Print "Hello" for every number except -1  
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+int num;
+
+do {
+    System.out.println("Hello");
+    System.out.print("Enter a number (or -1 to stop): ");
+    num = scanner.nextInt();
+} while (num != -1);
+```
+📤 **Output Example:**  
+```
+Hello  
+Enter a number (or -1 to stop): 5  
+Hello  
+Enter a number (or -1 to stop): 10  
+Hello  
+Enter a number (or -1 to stop): -1
+```
+
+---
+
+### 9. Multiplication table using `JOptionPane`  
+```java
+import javax.swing.JOptionPane;
+
+String input = JOptionPane.showInputDialog("Enter a number for its multiplication table:");
+int num = Integer.parseInt(input);
+
+StringBuilder table = new StringBuilder();
+for (int i = 1; i <= 10; i++) {
+    table.append(num).append(" x ").append(i).append(" = ").append(num * i).append("\n");
+}
+
+JOptionPane.showMessageDialog(null, table.toString());
+```
+📤 **Output Example:**  
+```
+Enter a number for its multiplication table: 4  
+4 x 1 = 4  
+4 x 2 = 8  
+...  
+4 x 10 = 40
+```
+
+---
+
+### 10. Print even and odd numbers in the range of 1 to 10  
+```java
+System.out.println("Even numbers:");
+for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        System.out.println(i);
+    }
+}
+System.out.println("Odd numbers:");
+for (int i = 1; i <= 10; i++) {
+    if (i % 2 != 0) {
+        System.out.println(i);
+    }
+}
+```
+📤 **Output:**  
+```
+Even numbers:  
+2  
+4  
+6  
+8  
+10  
+
+Odd numbers:  
+1  
+3  
+5  
+7  
+9  
+```
+
+---
+
+### 11. Reverse a number  
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+System.out.print("Enter a number: ");
+int number = scanner.nextInt();
+int reversed = 0;
+
+while (number != 0) {
+    int digit = number % 10;
+    reversed = reversed * 10 + digit;
+    number /= 10;
+}
+
+System.out.println("Reversed number: " + reversed);
+```
+📤 **Output Example:**  
+```
+Enter a number: 5236  
+Reversed number: 6325
+```
+
+---
+
+### Task: Calculator  
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Enter first number: ");
+double num1 = scanner.nextDouble();
+
+System.out.print("Enter operator (+, -, *, /): ");
+char operator = scanner.next().charAt(0);
+
+System.out.print("Enter second number: ");
+double num2 = scanner.nextDouble();
+
+double result;
+
+switch (operator) {
+    case '+':
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+    case '/':
+        if (num2 != 0) {
+            result = num1 / num2;
+        } else {
+            System.out.println("Error: Division by zero");
+            return;
+        }
+        break;
+    default:
+        System.out.println("Error: Invalid operator");
+        return;
+}
+
+System.out.println("Result: " + result);
+```
+📤 **Output Example:**  
+```
+Enter first number: 10  
+Enter operator (+, -, *, /): *  
+Enter second number: 5  
+Result: 50
+```
+
 
 ---
 
