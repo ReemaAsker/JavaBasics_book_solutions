@@ -1451,6 +1451,29 @@ Result: 50
 ---
 
 ## 📦 Arrays
+### Store and Print 5 Numbers
+```java
+public class StoreAndPrint {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50}; // Store 5 integers
+
+        System.out.println("Stored numbers:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
+
+```
+📤 **Output:**
+```
+Stored numbers:
+10
+20
+30
+40
+50
+```
 
 ### Count even and odd in an array
 ```java
@@ -1466,7 +1489,6 @@ System.out.println("Even: " + even + ", Odd: " + odd);
 ```
 Even: 2, Odd: 3
 ```
-
 ### Reverse an array
 ```java
 int[] arr = {1,2,3,4,5};
@@ -1477,6 +1499,76 @@ for (int i = arr.length - 1; i >= 0; i--) {
 📤 **Output:**
 ```
 5 4 3 2 1
+```
+
+### Check if Array Contains a Value
+```java
+public class ContainsValue {
+
+    public static boolean contains(int[] arr, int value) {
+        for (int num : arr) {
+            if (num == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {3, 6, 9, 12, 15};
+        int valueToCheck = 9;
+        boolean exists = contains(numbers, valueToCheck);
+
+        System.out.println("Array contains " + valueToCheck + ": " + exists);
+    }
+}
+
+```
+📤 **Output:**
+```
+Array contains 9: true
+```
+
+
+### Sort User Input Array in Ascending Order
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SortArray {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter number of elements:");
+        int n = scanner.nextInt();
+
+        int[] numbers = new int[n];
+
+        System.out.println("Enter " + n + " numbers:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        Arrays.sort(numbers);
+
+        System.out.println("Sorted array in ascending order:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+
+    }
+}
+
+```
+📤 **Input:**
+```
+5
+30 10 50 20 40```
+📤 **Output:**
+```
+Sorted array in ascending order:
+10 20 30 40 50 
 ```
 
 ---
