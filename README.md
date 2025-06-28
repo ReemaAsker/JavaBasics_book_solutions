@@ -15,6 +15,7 @@ This document provides all the exercises from the book along with their solution
 - [🔧 Methods](#-methods)
 - [🔁 Recursion](#-recursion)
 - [📦 Arrays](#-arrays)
+- [2️⃣🅰️ 2DA](#-two-d-array)
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
 ---
@@ -1791,6 +1792,99 @@ for (int i = 0; i < count; i++) {
 Product with ID 2 deleted successfully.
 ```
 
+---
+## 2️⃣🅰️ 2DA
+
+### Exercise 1: Store and Print Even Numbers Only
+200    220    270
+100    60    40
+4       3
+
+```java
+public class PrintEvenNumbers {
+    public static void main(String[] args) {
+        int[][] numbers = {
+            {200, 220, 270},
+            {100, 60, 40},
+            {4, 3, 0} // Added 0 for rectangular shape
+        };
+
+        System.out.println("Even numbers in the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                if (numbers[i][j] % 2 == 0 && numbers[i][j] != 0) {
+                    System.out.print(numbers[i][j] + " ");
+                }
+            }
+        }
+    }
+}
+```
+### Exercise 2: MCQ Student Answers — Count Correct Answers per Student
+``` java
+public class StudentMCQResults {
+
+    public static void main(String[] args) {
+        char[] correctAnswers = {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'};
+
+        char[][] studentAnswers = {
+            {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
+            {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
+            {'E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D'},
+            {'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'},
+            {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
+            {'B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
+            {'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
+            {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}
+        };
+
+        for (int i = 0; i < studentAnswers.length; i++) {
+            int correctCount = 0;
+            for (int j = 0; j < correctAnswers.length; j++) {
+                if (studentAnswers[i][j] == correctAnswers[j]) {
+                    correctCount++;
+                }
+            }
+            System.out.println("Student " + (i + 1) + " correct answers: " + correctCount);
+        }
+    }
+}
+```
+### Exercise 3: Sum of Diagonal, Upper and Lower Diagonal Elements in 4x4 Matrix
+``` java
+public class DiagonalSums {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int mainDiagonalSum = 0;
+        int upperDiagonalSum = 0;
+        int lowerDiagonalSum = 0;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (i == j) {
+                    mainDiagonalSum += matrix[i][j];
+                } else if (i < j) {
+                    upperDiagonalSum += matrix[i][j];
+                } else {
+                    lowerDiagonalSum += matrix[i][j];
+                }
+            }
+        }
+
+        System.out.println("Sum of main diagonal elements: " + mainDiagonalSum);
+        System.out.println("Sum of upper diagonal elements: " + upperDiagonalSum);
+        System.out.println("Sum of lower diagonal elements: " + lowerDiagonalSum);
+    }
+}
+
+
+```
 ---
 
 ## 🛍 Final Project (Product Management System)
