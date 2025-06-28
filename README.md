@@ -808,6 +808,7 @@ public class ProductInfoNoLoops {
 
     }
 }
+```
 ```text
 Enter product 1 name: Laptop
 Enter product 1 type: Electronics
@@ -908,9 +909,10 @@ public static void main(String[] args) {
 }
 ```
 Output 
-<img src= "confirmDi">
+<img src= "assets/excercise1_confirm_dialog.png">
 
 # Exercise : 
+Using JOptionPane class create a java program that allow user enter 3 numbers and then show the product result of them and finaly show to user a confirm message that is a waning “Are you sure , you want to close “ if click yes show a message “You make a fetal error when click yes.
 
 ```java
 import javax.swing.JOptionPane;
