@@ -865,7 +865,6 @@ public class RectangleArea {
         // Output: Display the result
         System.out.println("The area of the rectangle is: " + area);
 
-        scanner.close();
     }
 }
 
@@ -1975,19 +1974,19 @@ public class ElementFrequency {
 
 ```
 **Explination** :
-**Input Array:**
+- **Input Array:**
 The array numbers contains the elements for which we calculate the frequency.
 
-**Visited Array:**
+- **Visited Array:**
 boolean[] visited keeps track of which elements have already been counted, ensuring each element is processed only once.
 
-**Outer Loop:**
+- **Outer Loop:**
 Iterates over each element in the array.
 
-**Inner Loop:**
+- **Inner Loop:**
 Checks for duplicates of the current element (numbers[i]) in the rest of the array and increments the count.
 
-**Mark Visited:**
+- **Mark Visited:**
 Duplicates are marked as visited to avoid counting them multiple times.
 
 
