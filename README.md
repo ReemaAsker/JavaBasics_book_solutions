@@ -1073,7 +1073,7 @@ Enter operator: /
 
 
 ## Exercise: Write a java code that implement the following flowchart:
-<img src= "assets/exercise2_loops_flowchart_to_code" >
+<img src= "assets/exercise2_loops_flowchart_to_code.png" >
 
 ```java
 public class FlowchartExample {
