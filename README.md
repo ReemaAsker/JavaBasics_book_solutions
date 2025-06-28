@@ -1856,6 +1856,231 @@ public class DiagonalSums {
 ```
 ---
 
+## Passing Arrays to methods:
+
+### Exercise 1: Count Even and Odd Numbers
+```java
+public class EvenOddCounter {
+
+    public static void countEvenOdd(int[] numbers) {
+        int evenCount = 0, oddCount = 0;
+
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+        System.out.println("Even numbers: " + evenCount);
+        System.out.println("Odd numbers: " + oddCount);
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {12, 3, 5, 8, 10, 13, 18, 21, 22, 24};
+        countEvenOdd(numbers);
+    }
+}
+
+
+```
+📤 **Output :**
+```
+Even numbers: 6
+Odd numbers: 4
+
+```
+
+### Exercise 2: Reverse an Array
+```java
+public class ReverseArray {
+
+    public static void printReverse(int[] arr) {
+        System.out.println("Array in reverse order:");
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        printReverse(numbers);
+    }
+}
+
+```
+📤 **Output :**
+```
+Array in reverse order:
+5 4 3 2 1 
+```
+### Exercise 3: Sum All Elements in 2D Array
+```java
+public class Sum2DArray {
+
+    public static int sum2DArray(int[][] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                sum += array[i][j];
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[][] numbers = {
+            {1, 2},
+            {3, 4},
+            {5, 6}
+        };
+        System.out.println("Sum of all elements: " + sum2DArray(numbers));
+    }
+}
+
+
+```
+📤 **Output :**
+```
+Sum of all elements: 21
+
+```
+
+### Exercise 4: Frequency of Each Element
+```java
+public class ElementFrequency {
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 2, 3, 4, 4, 4, 5};
+        boolean[] visited = new boolean[numbers.length]; // To track visited elements
+
+        System.out.println("Frequency of each element:");
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (!visited[i]) {
+                int count = 1; // Initialize frequency count
+                for (int j = i + 1; j < numbers.length; j++) {
+                    if (numbers[i] == numbers[j]) {
+                        count++;
+                        visited[j] = true; // Mark the duplicate as visited
+                    }
+                }
+                System.out.println(numbers[i] + ": " + count);
+            }
+        }
+    }
+}
+
+
+```
+**Explination** :
+**Input Array:**
+The array numbers contains the elements for which we calculate the frequency.
+
+**Visited Array:**
+boolean[] visited keeps track of which elements have already been counted, ensuring each element is processed only once.
+
+**Outer Loop:**
+Iterates over each element in the array.
+
+**Inner Loop:**
+Checks for duplicates of the current element (numbers[i]) in the rest of the array and increments the count.
+
+**Mark Visited:**
+Duplicates are marked as visited to avoid counting them multiple times.
+
+
+📤 **Output :**
+```
+Frequency of each element:
+1: 1
+2: 2
+3: 1
+4: 3
+5: 1
+```
+
+### Exercise 5: Find Second Largest Number
+```java
+public class SecondLargest {
+
+    public static void findSecondLargest(int[] array) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int num : array) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            } else if (num > secondLargest && num != largest) {
+                secondLargest = num;
+            }
+        }
+
+        System.out.println("Second largest number: " + secondLargest);
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 5, 20, 8, 12};
+        findSecondLargest(numbers);
+    }
+}
+
+```
+📤 **Output :**
+```
+Second largest number: 12
+
+```
+
+### Exercise 6: Remove Element from Array
+```java
+public class RemoveElement {
+
+    public static int[] removeAtIndex(int[] array, int index) {
+        if (index < 0 || index >= array.length) {
+            System.out.println("Invalid index.");
+            return array;
+        }
+
+        int[] newArray = new int[array.length - 1];
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (i != index) {
+                newArray[j++] = array[i];
+            }
+        }
+        return newArray;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        int indexToRemove = 2;
+
+        int[] newArray = removeAtIndex(numbers, indexToRemove);
+
+        // Printing array directly using a loop
+        System.out.print("Array after removing element: [");
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i]);
+            if (i < newArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+}
+
+
+```
+📤 **Output :**
+```
+Array after removing element: [1, 2, 4, 5]
+
+```
+----
+
+
 ## 🛍 Final Project (Product Management System)
 
 This solution uses **arrays only**, no advanced Java features, and follows your book's covered topics.
