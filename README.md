@@ -12,9 +12,9 @@ This document provides all the exercises from the book along with their solution
 - [🔤 Input,Output](#-input-variables--parsing)
 - [🔷 Decision Statement](#-decision-statement--parsing)
 - [🔁 Loops](#-loops)
-- [📦 Arrays](#-arrays)
 - [🔧 Methods](#-methods)
 - [🔁 Recursion](#-recursion)
+- [📦 Arrays](#-arrays)
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
 ---
