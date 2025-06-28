@@ -633,7 +633,7 @@ public class FindBiggestNumber {
 }
 ```
 Output:
-<img src="assets/excercise4_input_by_gui.png"  />
+<img src="assets/exercise4_input_by_gui.png"  />
 
 ## Input by Console
 
