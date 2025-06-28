@@ -477,6 +477,486 @@ Nationality: Palestinine
 <img src="assets/Flowchart exercies.png" width="300" />
 
 ---
+### Input and Ouput ::
+<img src="assets/input_output.png" width="300" />
+
+
+## Output by GUI :
+```java
+import javax.swing.JOptionPane;
+
+public class MessageDialogsExample {
+    public static void main(String[] args) {
+        // First Window: Error message
+        JOptionPane.showMessageDialog(
+                null,
+                "Warning Message",
+                "Delete All Data",
+                JOptionPane.ERROR_MESSAGE
+        );
+
+        // Second Window: Information message
+        JOptionPane.showMessageDialog(
+                null,
+                "Success",
+                "Data Recording",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+
+        // Third Window: Question message
+        JOptionPane.showMessageDialog(
+                null,
+                "Are you Sure",
+                "Question Message",
+                JOptionPane.QUESTION_MESSAGE
+        );
+
+        // Fourth Window: Warning message
+        JOptionPane.showMessageDialog(
+                null,
+                "Not valid input",
+                "Error Message",
+                JOptionPane.WARNING_MESSAGE
+        );
+    }
+}
+```
+## Input by GUI
+<img src="assets/input_by_gui_1.png" width="300" />
+# Exercise "1" :
+
+```java
+public static void main(String[] args) {
+        String firstName = JOptionPane.showInputDialog(
+                null,
+                "First name:",
+                "Input",
+                JOptionPane.QUESTION_MESSAGE
+        );
+        
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Hello "+firstName+ "!",
+                    "Greeting",
+                    JOptionPane.INFORMATION_MESSAGE
+            );
+       
+    }
+```
+# Exercise "2" :
+```java
+    public static void main(String[] args) {
+        String firstName = JOptionPane.showInputDialog(
+                null,
+                "First name:",
+                "Input",
+                JOptionPane.QUESTION_MESSAGE
+        );
+        String familyName = JOptionPane.showInputDialog(
+                null,
+                "Family Name:",
+                "Input",
+                JOptionPane.QUESTION_MESSAGE
+        );
+        JOptionPane.showMessageDialog(
+                null,
+                "You are  " + firstName + " " + familyName,
+                "Greeting", JOptionPane.INFORMATION_MESSAGE
+        );
+
+    }
+```
+# Exercise "3" :
+Exercise : Write a java program that allow user enter his name , age, grade and 3 marks and then display his name , age ,grade and the average of the entered marks .
+```java
+import javax.swing.JOptionPane;
+
+public class StudentInfo {
+    public static void main(String[] args) {
+        // Input
+        String name = JOptionPane.showInputDialog(null, "Enter your name:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String ageStr = JOptionPane.showInputDialog(null, "Enter your age:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String grade = JOptionPane.showInputDialog(null, "Enter your grade:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String mark1Str = JOptionPane.showInputDialog(null, "Enter mark 1:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String mark2Str = JOptionPane.showInputDialog(null, "Enter mark 2:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String mark3Str = JOptionPane.showInputDialog(null, "Enter mark 3:", "Input", JOptionPane.QUESTION_MESSAGE);
+
+        // Parsing numbers
+        int age = Integer.parseInt(ageStr);
+        double mark1 = Double.parseDouble(mark1Str);
+        double mark2 = Double.parseDouble(mark2Str);
+        double mark3 = Double.parseDouble(mark3Str);
+
+        // Calculate average
+        double average = (mark1 + mark2 + mark3) / 3;
+
+        // Output
+        String message = "Name: " + name + "\nAge: " + age + "\nGrade: " + grade + "\nAverage: " + average;
+        JOptionPane.showMessageDialog(null, message, "Student Info", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
+
+```
+# Exercise "4" :
+Exercise : Write a java program that allow user enter 3 numbers and then print the biggest one.
+``` java
+import javax.swing.JOptionPane;
+
+public class FindBiggestNumber {
+    public static void main(String[] args) {
+        // Input
+        String num1Str = JOptionPane.showInputDialog(null, "Enter first number:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String num2Str = JOptionPane.showInputDialog(null, "Enter second number:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String num3Str = JOptionPane.showInputDialog(null, "Enter third number:", "Input", JOptionPane.QUESTION_MESSAGE);
+
+        // Parsing
+        double num1 = Double.parseDouble(num1Str);
+        double num2 = Double.parseDouble(num2Str);
+        double num3 = Double.parseDouble(num3Str);
+
+        // Ternary operator to find the biggest number
+        double biggest = (num1 > num2)
+                            ? (num1 > num3 ? num1 : num3)
+                            : (num2 > num3 ? num2 : num3);
+
+        // Output
+        JOptionPane.showMessageDialog(null, "The biggest number is: " + biggest, "Result", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
+```
+## Input by Console
+
+# Exercise : Write a java program let user enter his information (name , specialize , age ) and then print it in good way.
+``` java
+import java.util.Scanner;
+
+public class UserInfo {
+    public static void main(String[] args) {
+        // Create Scanner object for input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt and read user's name
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Prompt and read user's specialization
+        System.out.print("Enter your specialization: ");
+        String specialize = scanner.nextLine();
+
+        // Prompt and read user's age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Display the user information
+        System.out.println("\n===== Your Information =====");
+        System.out.println("Name          : " + name);
+        System.out.println("Specialization: " + specialize);
+        System.out.println("Age           : " + age + " years old");
+        
+      
+    }
+}
+
+```
+```text
+Enter your name: Reema Asker From Palestine
+Enter your specialization: Software Engineering
+Enter your age: 25
+
+===== Your Information =====
+Name          : Reema Asker From Palestine
+Specialization: Software Engineering
+Age           : 25 years old
+```
+
+# Exercise : Write a java program let user enter a number and print “even” if its an even number and print “odd” if it’s an odd number.
+``` java
+import java.util.Scanner;
+
+public class EvenOddChecker {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is even or odd
+        if (number % 2 == 0) {
+            System.out.println("even");
+        } else {
+            System.out.println("odd");
+        }
+
+    }
+}
+```
+```text
+Enter a number: 7
+odd
+```
+``` text
+Enter a number: 24
+even
+```
+# Exercise :Write a java program let user enter 3 marks and print the most mark that can make his average down
+``` java
+import java.util.Scanner;
+
+public class WorstMarkTernary {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: 3 marks
+        System.out.print("Enter first mark: ");
+        double mark1 = scanner.nextDouble();
+
+        System.out.print("Enter second mark: ");
+        double mark2 = scanner.nextDouble();
+
+        System.out.print("Enter third mark: ");
+        double mark3 = scanner.nextDouble();
+
+        // Averages when each mark is removed
+        double avgWithout1 = (mark2 + mark3) / 2;
+        double avgWithout2 = (mark1 + mark3) / 2;
+        double avgWithout3 = (mark1 + mark2) / 2;
+
+        // Use ternary to find the mark that lowers average the most
+        double worstMark = (avgWithout1 >= avgWithout2 && avgWithout1 >= avgWithout3) ? mark1
+                          : (avgWithout2 >= avgWithout1 && avgWithout2 >= avgWithout3) ? mark2
+                          : mark3;
+
+        // Output result
+        System.out.println("\nThe mark that lowers your average the most is: " + worstMark);
+
+    }
+}
+
+```
+
+```text
+Enter first mark: 25
+Enter second mark: 80
+Enter third mark: 90
+
+The mark that lowers your average the most is: 25.0
+```
+# Exercise : Write a java program let user enter 5 products information (product name , product type , product price) and print all product names then in another line print the product types then in print the summation of all products prices. 
+``` java
+import java.util.Scanner;
+
+public class ProductInfoNoLoops {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Product 1
+        System.out.print("Enter product 1 name: ");
+        String name1 = scanner.nextLine();
+        System.out.print("Enter product 1 type: ");
+        String type1 = scanner.nextLine();
+        System.out.print("Enter product 1 price: ");
+        double price1 = scanner.nextDouble();
+        scanner.nextLine(); // consume newline
+
+        // Product 2
+        System.out.print("Enter product 2 name: ");
+        String name2 = scanner.nextLine();
+        System.out.print("Enter product 2 type: ");
+        String type2 = scanner.nextLine();
+        System.out.print("Enter product 2 price: ");
+        double price2 = scanner.nextDouble();
+        scanner.nextLine();
+
+        // Product 3
+        System.out.print("Enter product 3 name: ");
+        String name3 = scanner.nextLine();
+        System.out.print("Enter product 3 type: ");
+        String type3 = scanner.nextLine();
+        System.out.print("Enter product 3 price: ");
+        double price3 = scanner.nextDouble();
+        scanner.nextLine();
+
+        // Product 4
+        System.out.print("Enter product 4 name: ");
+        String name4 = scanner.nextLine();
+        System.out.print("Enter product 4 type: ");
+        String type4 = scanner.nextLine();
+        System.out.print("Enter product 4 price: ");
+        double price4 = scanner.nextDouble();
+        scanner.nextLine();
+
+        // Product 5
+        System.out.print("Enter product 5 name: ");
+        String name5 = scanner.nextLine();
+        System.out.print("Enter product 5 type: ");
+        String type5 = scanner.nextLine();
+        System.out.print("Enter product 5 price: ");
+        double price5 = scanner.nextDouble();
+        scanner.nextLine();
+
+        // Print product names
+        System.out.println("\nProduct names: " + name1 + " " + name2 + " " + name3 + " " + name4 + " " + name5);
+
+        // Print product types
+        System.out.println("Product types: " + type1 + " " + type2 + " " + type3 + " " + type4 + " " + type5);
+
+        // Print total price
+        double totalPrice = price1 + price2 + price3 + price4 + price5;
+        System.out.println("Total price of all products: $" + totalPrice);
+
+    }
+}
+```text
+Enter product 1 name: Laptop
+Enter product 1 type: Electronics
+Enter product 1 price: 1200
+Enter product 2 name: Shirt
+Enter product 2 type: Clothing
+Enter product 2 price: 50
+Enter product 3 name: Coffee
+Enter product 3 type: Beverage
+Enter product 3 price: 5.5
+Enter product 4 name: Book
+Enter product 4 type: Stationery
+Enter product 4 price: 15.75
+Enter product 5 name: Headphones
+Enter product 5 type: Electronics
+Enter product 5 price: 80
+
+Product names: Laptop Shirt Coffee Book Headphones
+Product types: Electronics Clothing Beverage Stationery Electronics
+Total price of all products: $1351.25
+```
+
+# Exercise : Write a java program that calculate rectangle area.(think about the input , process and output ) 
+``` java
+import java.util.Scanner;
+
+public class RectangleArea {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Get length and width from the user
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+
+        System.out.print("Enter the width of the rectangle: ");
+        double width = scanner.nextDouble();
+
+        // Process: Calculate the area
+        double area = length * width;
+
+        // Output: Display the result
+        System.out.println("The area of the rectangle is: " + area);
+
+        scanner.close();
+    }
+}
+
+
+```text
+Enter the length of the rectangle: 5.5
+Enter the width of the rectangle: 3
+The area of the rectangle is: 16.5
+```
+
+# Simple Challenge
+``` java
+import java.util.Scanner;
+
+public class MagicalPotionStore {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Magical Potion Store!");
+
+        // Get user's age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Get loyalty card status
+        System.out.print("Do you have a loyalty card? (true/false): ");
+        boolean hasLoyaltyCard = scanner.nextBoolean();
+
+        // Base price
+        double price = 10.0;
+
+        // Apply age-based discount
+        price = (age < 18) ? price * 0.8 : price;
+
+        // Apply loyalty card discount
+        price = hasLoyaltyCard ? price * 0.95 : price;
+
+        // Show final price
+        System.out.printf("Your final price is: %.1f gold coins.\n", price);
+    }
+}
+
+```text
+Welcome to the Magical Potion Store!
+Enter your age: 10
+Do you have a loyalty card? (true/false): true
+Your final price is: 7.6 gold coins.
+```
+# showConfirmDialog
+
+```java
+public static void main(String[] args) {
+    int selectedOp =JOptionPane.showConfirmDialog(null, "Select an Option.." , "Do you want to proceed" , 1 ,0);
+}
+```
+Output 
+<img src= "confirmDi">
+
+# Exercise : 
+
+```java
+import javax.swing.JOptionPane;
+
+public class ProductAndWarning {
+    public static void main(String[] args) {
+        // Input 3 numbers as strings
+        String num1Str = JOptionPane.showInputDialog(null, "Enter the first number:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String num2Str = JOptionPane.showInputDialog(null, "Enter the second number:", "Input", JOptionPane.QUESTION_MESSAGE);
+        String num3Str = JOptionPane.showInputDialog(null, "Enter the third number:", "Input", JOptionPane.QUESTION_MESSAGE);
+
+        // Convert to numbers
+        double num1 = Double.parseDouble(num1Str);
+        double num2 = Double.parseDouble(num2Str);
+        double num3 = Double.parseDouble(num3Str);
+
+        // Calculate product
+        double product = num1 * num2 * num3;
+
+        // Show product result
+        JOptionPane.showMessageDialog(null, "The product is: " + product, "Result", JOptionPane.INFORMATION_MESSAGE);
+
+        // Show confirm dialog
+        int choice = JOptionPane.showConfirmDialog(
+                null,
+                "Are you sure you want to close?",
+                "Warning",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+        );
+
+        // If user clicked Yes
+        if (choice == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "You made a fatal error when clicking Yes.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+            );
+        }
+    }
+}
+```
+Output 
+
+<img src= " exercise2.png" >
 
 
 ## 🔁 Loops
