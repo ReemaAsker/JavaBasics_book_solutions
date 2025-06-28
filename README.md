@@ -10,6 +10,7 @@ This document provides all the exercises from the book along with their solution
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
 - [🔤 Input,Output](#-input-variables--parsing)
+- [🔷 Decision Statement](#-decision-statement--parsing)
 - [🔁 Loops](#-loops)
 - [📦 Arrays](#-arrays)
 - [🔧 Methods](#-methods)
@@ -970,6 +971,100 @@ public class ProductAndWarning {
 Output 
 
 <img src= "assets/exercise2_confirm_dialog.png" >
+
+## 🔷 Decision Statement
+
+### 🧪 Exercise 1: Future Year Check
+
+**Description:**  
+Write a Java program that allows the user to enter an integer number. Add it to the year from **2 years ago**, then print `"We are in the future"` if the result is greater than the current year.  
+
+**Example:**  
+If the user enters `3` and the current year is `2025`, we take `2025 - 2 = 2023`, then `2023 + 3 = 2026`, which is greater than `2025`, so the program prints:  
+`We are in the future`.
+
+---
+
+```java
+import javax.swing.JOptionPane;
+import java.time.Year;
+
+public class FutureYearCheck {
+    public static void main(String[] args) {
+        int currentYear = Year.now().getValue();
+
+        String input = JOptionPane.showInputDialog(null, "Enter a number:", "Input", JOptionPane.QUESTION_MESSAGE);
+        int userNumber = Integer.parseInt(input);
+
+        int previousYear = currentYear - 2;
+        int result = previousYear + userNumber;
+
+        if (result > currentYear) {
+            JOptionPane.showMessageDialog(null, "We are in the future", "Result", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "We are in the present or past", "Result", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+}
+```
+```text
+Enter a number: 3
+→ We are in the future
+
+```
+### 🧮 Exercise 2: Simple Calculator Using switch
+
+**Description:**
+Create a Java calculator program that allows the user to enter 2 numbers and an operator (+, -, *, /), then performs the operation and displays the result.
+
+**Solution**:
+
+```java
+import javax.swing.JOptionPane;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        double num1 = Double.parseDouble(JOptionPane.showInputDialog("Enter first number:"));
+        double num2 = Double.parseDouble(JOptionPane.showInputDialog("Enter second number:"));
+        String operator = JOptionPane.showInputDialog("Enter operator (+, -, *, /):");
+
+        double result;
+
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                JOptionPane.showMessageDialog(null, "Result: " + result);
+                break;
+            case "-":
+                result = num1 - num2;
+                JOptionPane.showMessageDialog(null, "Result: " + result);
+                break;
+            case "*":
+                result = num1 * num2;
+                JOptionPane.showMessageDialog(null, "Result: " + result);
+                break;
+            case "/":
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    JOptionPane.showMessageDialog(null, "Result: " + result);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error: Cannot divide by zero", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Invalid operator", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
+```
+
+``` text
+Enter first number: 10
+Enter second number: 5
+Enter operator: /
+→ Result: 2.0
+```
+
 
 ## 🔁 Loops
 
