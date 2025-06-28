@@ -572,9 +572,8 @@ public static void main(String[] args) {
 ```
 # Exercise "3" :
 Exercise : Write a java program that allow user enter his name , age, grade and 3 marks and then display his name , age ,grade and the average of the entered marks .
-<video >
-  <source src="assets/exercise4_input_by_gui.mp4" type="video/mp4">
-</video>
+[🎬 Watch the Solution](assets/exercise4_input_by_gui.mp4)
+
 
 ```java
 import javax.swing.JOptionPane;
