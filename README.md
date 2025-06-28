@@ -478,10 +478,12 @@ Nationality: Palestinine
 
 ---
 ### Input and Ouput ::
-<img src="assets/input_output.png" width="300" />
 
 
 ## Output by GUI :
+<img src="assets/output_by_gui.png" />
+
+
 ```java
 import javax.swing.JOptionPane;
 
@@ -522,7 +524,7 @@ public class MessageDialogsExample {
 }
 ```
 ## Input by GUI
-<img src="assets/input_by_gui_1.png" width="300" />
+<img src="assets/excercise1_input_by_gui.png"  />
 # Exercise "1" :
 
 ```java
@@ -544,6 +546,8 @@ public static void main(String[] args) {
     }
 ```
 # Exercise "2" :
+<img src="assets/excercise2_input_by_gui.png"  />
+
 ```java
     public static void main(String[] args) {
         String firstName = JOptionPane.showInputDialog(
