@@ -1762,37 +1762,6 @@ public static int waysToClimb(int n) {
 ```
 
 ---
-
-## 🛍 Final Project (Product Management System)
-
-### Add, Display, Search, Delete Products (Using Arrays Only)
-
-```java
-int[] ids = new int[100];
-String[] names = new String[100];
-double[] prices = new double[100];
-int count = 0;
-
-// Example of copying for deletion
-int[] newIds = new int[100];
-String[] newNames = new String[100];
-double[] newPrices = new double[100];
-int newCount = 0;
-for (int i = 0; i < count; i++) {
-    if (ids[i] != idToDelete) {
-        newIds[newCount] = ids[i];
-        newNames[newCount] = names[i];
-        newPrices[newCount] = prices[i];
-        newCount++;
-    }
-}
-```
-📤 **Output (after deleting ID 2):**
-```
-Product with ID 2 deleted successfully.
-```
-
----
 ## 2️⃣🅰️ 2DA
 
 ### Exercise 1: Store and Print Even Numbers Only
