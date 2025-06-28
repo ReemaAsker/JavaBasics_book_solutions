@@ -572,10 +572,10 @@ public static void main(String[] args) {
 ```
 # Exercise "3" :
 Exercise : Write a java program that allow user enter his name , age, grade and 3 marks and then display his name , age ,grade and the average of the entered marks .
-<video width="480" controls>
+<video >
   <source src="assets/exercise4_input_by_gui.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
+
 ```java
 import javax.swing.JOptionPane;
 
