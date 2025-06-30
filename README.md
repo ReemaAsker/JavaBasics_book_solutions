@@ -81,7 +81,7 @@ When working with Java, you'll encounter three essential components: **JRE**, **
 |          +---------------------+
 ```
 
-##📜➡️🛠️➡️💾➡️⚙️  How Java Code Operate using compiler and interpter (based on JDK tools) :
+## 📜➡️🛠️➡️💾➡️⚙️  How Java Code Operate using compiler and interpter (based on JDK tools) :
 <img src="assets/steps_of_run_java_code.png" width="300" />
 
 ---
