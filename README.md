@@ -11,7 +11,7 @@ This document provides all the exercises from the book along with their solution
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
 - [🔷 Decision Statement](#-decision-statement)
-- [🔤 Input,Output](#-input-variables--parsing)
+- [🔤 Input,Output](#-input-output)
 - [🔁 Loops](#-loops)
 - [🔧 Methods](#-methods)
 - [🔁 Recursion](#-recursion)
