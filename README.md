@@ -10,6 +10,7 @@ This document provides all the exercises from the book along with their solution
 - [🛠️ Java Development Environment Setup Guide](#🛠️-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
+- [🔷 Decision Statement](#-decision-statement)
 - [🔤 Input,Output](#-input-variables--parsing)
 - [🔁 Loops](#-loops)
 - [🔧 Methods](#-methods)
