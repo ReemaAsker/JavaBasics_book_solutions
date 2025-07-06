@@ -6,8 +6,8 @@ This document provides all the exercises from the book along with their solution
 
 ## 🗂 Table of Contents
 
-- [🛠️🔍 Understanding of JRE ,JDK ,JVM]
-- [🛠️ Java Development Environment Setup Guide](#-java-development-environment-setup-guide)
+- [🛠️🔍 Understanding of JRE ,JDK ,JVM](#🛠️🔍-understanding-of-jre-jdk-,jvm)
+- [🛠️ Java Development Environment Setup Guide](#🛠️-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
 - [🔤 Input,Output](#-input-variables--parsing)
@@ -20,7 +20,7 @@ This document provides all the exercises from the book along with their solution
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 
 ---
-# 🛠️🔍 Understanding JRE, JDK, and JVM
+## 🛠️🔍 Understanding JRE, JDK, and JVM
 
 When working with Java, you'll encounter three essential components: **JRE**, **JDK**, and **JVM**. Here's a simple breakdown to understand their differences and how they work together.
 
