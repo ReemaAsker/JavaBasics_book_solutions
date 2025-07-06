@@ -6,7 +6,7 @@ This document provides all the exercises from the book along with their solution
 
 ## 🗂 Table of Contents
 
-- [Understanding JRE, JDK, and JVM](#understanding-jre-jdk-and-jvm)
+- [Understanding JRE, JDK, and JVM](#🛠️🔍-understanding-jre-jdk-and-jvm)
 - [🛠️ Java Development Environment Setup Guide](#🛠️-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
