@@ -85,7 +85,7 @@ When working with Java, you'll encounter three essential components: **JRE**, **
 <img src="assets/steps_of_run_java_code.png" width="300" />
 
 ---
-# 🛠️ Java Development Environment Setup Guide
+## 🛠️ Java Development Environment Setup Guide
 
 This guide provides step-by-step instructions to set up the Java Development Kit (JDK) and configure your environment variables on Windows and macOS. Follow this guide to prepare your system for Java development and related tools like [Apache ANT](https://documentation.provar.com/documentation/devops/apache-ant/ant-licensing/).
 
