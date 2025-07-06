@@ -6,7 +6,7 @@ This document provides all the exercises from the book along with their solution
 
 ## 🗂 Table of Contents
 
-- [🛠️🔍Understanding](#-understanding)
+- [🛠️🔍Understanding](#understanding)
 - [🛠️ Java Development Environment Setup Guide](#-java-development-environment-setup-guide)
 - [✅ Basic Tasks](#-basic-tasks)
 - [🔧 Operations](#-operations)
