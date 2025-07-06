@@ -18,7 +18,6 @@ This document provides all the exercises from the book along with their solution
 - [📦 Arrays](#-arrays)
 - [2️⃣🅰️ 2DA](#2️⃣🅰️-2da)
 - [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
-## 2️⃣🅰️ 2DA
 
 ---
 # 🛠️🔍 Understanding JRE, JDK, and JVM
