@@ -7,17 +7,17 @@ This document provides all the exercises from the book along with their solution
 ## 🗂 Table of Contents
 
 - [Understanding JRE, JDK, and JVM](#understanding-jre-jdk-and-jvm)
-- [Java Development Environment Setup Guide](#java-development-environment-setup-guide)
-- [Basic Tasks](#basic-tasks)
-- [Operations](#operations)
-- [Input and output](#input-and-output)
-- [Decision Statement](#decision-statement)
-- [Loops](#loops)
-- [Methods](#methods)
-- [Recursion](#recursion)
-- [Arrays](#arrays)
-- [2DA](#2da)
-- [Final Project Product Management System](#final-project-product-management-system)
+- [🛠️ Java Development Environment Setup Guide](#🛠️-java-development-environment-setup-guide)
+- [✅ Basic Tasks](#-basic-tasks)
+- [🔧 Operations](#-operations)
+- [🔤 Input,Output](#-input-variables--parsing)
+- [🔷 Decision Statement](#decision-statement)
+- [🔁 Loops](#-loops)
+- [🔧 Methods](#-methods)
+- [🔁 Recursion](#-recursion)
+- [📦 Arrays](#-arrays)
+- [2️⃣🅰️ 2DA](#2️⃣🅰️-2da)
+- [🛍 Final Project (Product Management System)](#-final-project-product-management-system)
 ---
 ## 🛠️🔍 Understanding JRE, JDK, and JVM
 
